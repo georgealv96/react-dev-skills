@@ -1,10 +1,11 @@
-import { useCallback } from 'react'
 import SkillListItem from './SkillListItem'
 
-export default function SkillList() {
+export default function SkillList({ skills }) {
   return (
     <ul>
-      <SkillListItem />
+      {skills.map((s, idx) => (
+        <SkillListItem key={idx} skill={s} />
+      ))}
     </ul>
   )
 }
