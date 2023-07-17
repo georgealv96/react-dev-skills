@@ -1,9 +1,5 @@
+import App from './App'
+
 export default function SkillListItem() {
-  return (
-    <ul>
-      <li>SkillListItem</li>
-      <li>SkillListItem</li>
-      <li>SkillListItem</li>
-    </ul>
-  )
+  return <li>Skill</li>
 }

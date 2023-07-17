@@ -1,5 +1,10 @@
+import { useCallback } from 'react'
 import SkillListItem from './SkillListItem'
 
 export default function SkillList() {
-  return <SkillListItem />
+  return (
+    <ul>
+      <SkillListItem />
+    </ul>
+  )
 }
