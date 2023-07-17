@@ -1,7 +1,5 @@
-import SkillListItem from "./SkillListItem"
+import SkillListItem from './SkillListItem'
 
 export default function SkillList() {
-  return(
-
-  )
+  return <SkillListItem />
 }
