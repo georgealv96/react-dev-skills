@@ -1,6 +1,7 @@
 import SkillList from './SkillList'
 import NewSkillForm from './NewSkillForm'
 import './App.css'
+import { useState } from 'react'
 
 const skills = [
   { name: 'HTML', level: 5 },
@@ -10,6 +11,8 @@ const skills = [
 ]
 
 function App() {
+  const [skillsList, setSkillsList] = useState(skills)
+
   return (
     <div className="App">
       <h1>React Dev Skills</h1>
