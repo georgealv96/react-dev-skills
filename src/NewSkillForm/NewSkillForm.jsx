@@ -15,8 +15,12 @@ export default function NewSkillForm(props) {
   function handleSubmit(e) {
     // this ensures tha the form does not trigger a full-page refresh when the button is clicked
     e.preventDefault()
-    console.log('oh no')
     props.addNewSkill(skill)
+
+    setSkill({
+      name: '',
+      level: 3
+    })
   }
 
   return (
@@ -30,7 +34,7 @@ export default function NewSkillForm(props) {
         onChange={handleChange}
       />
       <label>Level</label>
-      <select id="levels" name="level" onChange={handleChange}>
+      <select id="levels" name="level" onChange={handleChange} defaultValue={3}>
         <option value={1}>1</option>
         <option value={2}>2</option>
         <option value={3}>3</option>
