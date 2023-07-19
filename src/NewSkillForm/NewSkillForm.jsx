@@ -1,7 +1,7 @@
 import './NewSkillForm.css'
 import { useState } from 'react'
 
-export default function NewSkillForm() {
+export default function NewSkillForm(props) {
   const [skill, setSkill] = useState({
     name: '',
     level: 3
@@ -11,8 +11,16 @@ export default function NewSkillForm() {
     console.log(e.target.value)
     setSkill({ ...skill, [e.target.name]: e.target.value })
   }
+
+  function handleSubmit(e) {
+    // this ensures tha the form does not trigger a full-page refresh when the button is clicked
+    e.preventDefault()
+    console.log('oh no')
+    props.addNewSkill(skill)
+  }
+
   return (
-    <form className="NewSkillForm">
+    <form className="NewSkillForm" onSubmit={handleSubmit}>
       <label>Skill</label>
       <input
         type="text"
@@ -22,7 +30,7 @@ export default function NewSkillForm() {
         onChange={handleChange}
       />
       <label>Level</label>
-      <select id="levels">
+      <select id="levels" name="level" onChange={handleChange}>
         <option value={1}>1</option>
         <option value={2}>2</option>
         <option value={3}>3</option>
