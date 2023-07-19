@@ -34,7 +34,12 @@ export default function NewSkillForm(props) {
         onChange={handleChange}
       />
       <label>Level</label>
-      <select id="levels" name="level" onChange={handleChange} defaultValue={3}>
+      <select
+        id="levels"
+        name="level"
+        onChange={handleChange}
+        value={skill.level}
+      >
         <option value={1}>1</option>
         <option value={2}>2</option>
         <option value={3}>3</option>
