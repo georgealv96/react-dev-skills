@@ -1,9 +1,9 @@
-import SkillList from './SkillList'
-import NewSkillForm from './NewSkillForm'
+import SkillList from './SkillList/SkillList'
+import NewSkillForm from './NewSkillForm/NewSkillForm'
 import './App.css'
 import { useState } from 'react'
 
-const skills = [
+const skillsData = [
   { name: 'HTML', level: 5 },
   { name: 'CSS', level: 3 },
   { name: 'JavaScript', level: 4 },
@@ -11,7 +11,7 @@ const skills = [
 ]
 
 function App() {
-  const [skillsList, setSkillsList] = useState(skills)
+  const [skills, setSkills] = useState(skillsData)
 
   return (
     <div className="App">
